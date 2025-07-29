@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { useStore } from 'vuex'
 import { computed, ref, watch } from 'vue'
-import { CButton, COffcanvas, COffcanvasHeader, COffcanvasTitle, CCloseButton, COffcanvasBody } from '@coreui/vue';
+// import { CButton, COffcanvas, COffcanvasHeader, COffcanvasTitle, CCloseButton, COffcanvasBody } from '@coreui/vue';
 import { onMounted, onBeforeUnmount } from 'vue';
 
 const store = useStore();
 const totalItems = computed(() => store.state.totalItems);
 const showNav = ref('topNav');
 const scrollY = ref(0);
-const status = ref('topNav');
+// const status = ref('topNav');
 const constrolScroll = () => {
 
     if (window.scrollY > 200) {
