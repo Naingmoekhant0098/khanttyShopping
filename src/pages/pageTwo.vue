@@ -2,6 +2,7 @@
 import MaterLayout from '@/Layout/materLayout.vue';
 import { useStore } from 'vuex'
 import { computed } from 'vue'
+import router from '@/router';
 const store = useStore();
 const cartItems = computed(() => store.state.cart);
 const totalItems = computed(() => store.state.totalItems);
@@ -30,7 +31,8 @@ function removeFromCart(id) {
 
 <template>
     <MaterLayout>
-        <h1 class="text-3xl text-center mt-3 font-extrabold">Shopping Cart</h1>
+        
+        <h1 class="text-3xl text-center mt-3 font-extrabold  mt-[130px]">Shopping Cart</h1>
 
         <div class="flex gap-5 flex-wrap mt-10">
             <div class="md:w-[65%] sm:w-[100%] ">
@@ -99,7 +101,7 @@ function removeFromCart(id) {
                         <span class="text-[16px] font-bold">${{ Math.ceil(totalPrice) }}</span>
                     </div>
                     <div class="w-full h-[1px] bg-black my-3"></div>
-                    <button class="w-full bg-black text-[15px] text-white p-3 rounded-md mt-2">Checkout</button>
+                    <button @click="()=>router.push('/success')" class="w-full bg-black text-[15px] text-white p-3 rounded-md mt-2">Checkout</button>
                 </div>
             </div>
         </div>

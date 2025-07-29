@@ -10,9 +10,9 @@ import { ref } from 'vue';
 const productsCount = ref(150);
 const currentPage = ref(1);
 const productLimit = ref(20);
-const isLoadding = ref(true);
+// const isLoadding = ref(true);
 const LoadingCount = ref(8);
-import { onMounted } from 'vue';
+// import { onMounted } from 'vue';
 
 const fetchProduct = async () => {
     const response = await fetch(`https://dummyjson.com/products?skip=${(currentPage.value - 1) * productLimit.value}&limit=${productLimit.value}`);

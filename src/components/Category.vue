@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useQuery } from '@tanstack/vue-query';
+// import { useQuery } from '@tanstack/vue-query';
 import { ref } from 'vue';
 
 const categories = ref([

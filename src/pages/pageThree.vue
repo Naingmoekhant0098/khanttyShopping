@@ -18,12 +18,12 @@ const fetchCategory = async () => {
     return data;
 }
 
-const { isPending, isFetching, isError, data, error } = useQuery({
+const {  isFetching, data } = useQuery({
     queryKey: ['category', slug],
     queryFn: fetchCategory,
 })
 
-console.log(data)
+ 
 
 </script>
 <template>

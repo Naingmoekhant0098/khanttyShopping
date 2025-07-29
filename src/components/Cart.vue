@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useStore } from 'vuex'
-import { computed } from 'vue'
+// import { computed } from 'vue'
 import { productType } from '@/types/Product';
 const store = useStore();
 const props = defineProps<{ product: productType }>();
@@ -13,8 +13,7 @@ function addToCart() {
         description: props.product.description,
         image: props.product.images,
         category: props.product.category,
-        brand: props.product.brand,
-        
+        brand: props.product.brand, 
         discountPercentage: props.product.discountPercentage
     });
 }
